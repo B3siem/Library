@@ -112,10 +112,6 @@ class BookController {
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            // Tutaj dodaj logikę sprawdzającą, czy użytkownik o podanych danych istnieje
-            // Możesz użyć np. funkcji z modelu do weryfikacji danych
-
-            // Przykładowa weryfikacja (tylko dla celów demonstracyjnych, NIE używaj takiej w rzeczywistych projektach)
             if ($this->verifyLogin($username, $password)) {
                 // Zalogowano pomyślnie
                 $_SESSION['user'] = $username;
@@ -137,10 +133,7 @@ class BookController {
     }
 
     private function verifyLogin($username, $password) {
-        // Tutaj dodaj bezpieczny kod weryfikacji loginu
-        // Pamiętaj, aby unikać używania hardcoded danych w kodzie
-        // Użyj bezpiecznych metod, takich jak hashowanie haseł
-        // W tym przykładzie założono, że prawidłowy login to 'admin' i hasło to 'password'
+       
         return ($username === 'admin' && $password === 'password');
     }
 }
