@@ -1,9 +1,9 @@
 <?php
 // Konfiguracja bazy danych
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bookstore";
+$servername = "localhost:5000";
+$username = "admin";
+$password = "admin";
+$dbname = "Library";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
