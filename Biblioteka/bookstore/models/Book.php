@@ -4,11 +4,11 @@ class Book {
     private $conn;
 
     public function __construct() {
-        // Tutaj dodaj połączenie do bazy danych zgodne z twoją konfiguracją
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "your_database_name";
+      
+        $servername = "localhost:5000";
+        $username = "admin";
+        $password = "admin";
+        $dbname = "Library";
 
         try {
             $this->conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
