@@ -1,5 +1,5 @@
 <?php
-// Włącz raportowanie błędów na czas developmentu
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -11,11 +11,8 @@ include_once 'controllers/BookController.php';
 
 // Utwórz instancję kontrolera
 $bookController = new BookController();
-
-// Ustaw domyślną akcję (jeśli nie przekazano żadnej)
 $action = isset($_GET['action']) ? $_GET['action'] : 'index';
 
-// Obsługa różnych akcji
 switch ($action) {
     case 'index':
         $bookController->index();
